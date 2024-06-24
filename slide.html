@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider with Bootstrap 5</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        let counts = setInterval(updated, 100);
+        let upto = 0;
+    
+        function updated() {
+            let count = document.getElementById("counter");
+            count.innerHTML = ++upto;
+            if (upto === 167) {
+                clearInterval(counts)
+            }
+        }
+        let counts1 = setInterval(updated1, 100);
+        let upto1 = 0;
+    
+        function updated1() {
+            let count1 = document.getElementById("counter1");
+            count1.innerHTML = ++upto1;
+            if (upto1 === 16) {
+                clearInterval(counts1)
+            }
+        }
+        let counts2 = setInterval(updated2, 100);
+        let upto2 = 0;
+    
+        function updated2() {
+            let count2 = document.getElementById("counter2");
+            count2.innerHTML = ++upto2;
+            if (upto2 === 63) {
+                clearInterval(counts2)
+            }
+        }
+        let counts3 = setInterval(updated3, 100);
+        let upto3 = 0;
+    
+        function updated3() {
+            let count3 = document.getElementById("counter3");
+            count3.innerHTML = ++upto3;
+            if (upto3 === 50) {
+                clearInterval(counts3)
+            }
+        }
+    </style>
+</head>
+let counts = setInterval(updated, 100);
+let upto = 0;
+let upto1 = 0;
+let upto2 = 0;
+let upto3 = 0;
+
+function updated() {
+    let count = document.getElementById("counter");
+    let count1 = document.getElementById("counter1");
+    let count2 = document.getElementById("counter2");
+    let count3 = document.getElementById("counter3");
+    if (upto < 167) {
+        count.innerHTML = ++upto; 
+    }
+    if (upto1 < 16) {
+        count1.innerHTML = ++upto1;
+    }
+    if (upto2 < 63) {
+        count2.innerHTML = ++upto2;
+    }
+    if (upto3 < 50) {
+        count3.innerHTML = ++upto3;
+    }
+    if (upto === 167) {
+        clearInterval(updated)
+    }
+}

@@ -1,0 +1,1222 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bootstrap Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #nav-line {
+            padding-left: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #intt::placeholder {
+            color: white;
+        }
+
+        li {
+            padding-left: 20px;
+        }
+
+        .custom-div {
+            background-color: whitesmoke;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .nav-link:hover {
+            color: blue;
+        }
+
+        .custom-div {
+            padding: 25px;
+        }
+
+        .slide-1 {
+            display: flex;
+            min-height: 70%;
+            flex-direction: row;
+            align-items: start;
+        }
+
+        #carouselimg-1 {
+            background-image: url('images/slide.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #carouselimg-2 {
+            background-image: url('images/img-2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #carouselimg-3 {
+            background-image: url('images/stock-2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #box-3 {
+            display: flex;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            justify-content: space-between;
+        }
+
+        .card-1 {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-footer {
+            background-color: #0D2E58;
+            opacity: 0.9;
+        }
+
+        #car {
+            background-color: #F2F2F2;
+            min-width: 100%;
+            border: none;
+        }
+
+        #car:hover {
+            box-shadow: 0px 8px 16px 0px;
+        }
+
+        #box-4 {
+            background-image: url('images/office3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 50%;
+            color: white;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .carousel-control-prev-icon {
+            color: black;
+            background-color: black;
+        }
+
+        .carousel-control-next-icon {
+            color: black;
+            background-color: black;
+        }
+
+        #car-3 {
+            border: none;
+            min-height: 100%;
+            color: grey;
+            background-color: #F2F2F2;
+        }
+
+        #box-5 {
+            background-image: url('images/office3.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 50%;
+        }
+
+        .box-5-1 {
+            padding-top: 100px;
+        }
+
+        hr {
+            border-top: 8px solid rgba(0, 255, 38, 0.877);
+            border-radius: 5px;
+            width: 50px;
+        }
+
+        .vl {
+            border-left: 6px solid green;
+            height: 500px;
+        }
+
+        .card-map {
+            background-color: #0D2E58;
+            color: white;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .stock:hover {
+            box-shadow: 0px 8px 16px 0px;
+        }
+
+        .btn:hover {
+            background-color: #0D2E58;
+            color: white;
+        }
+
+        .slick-slider1 .element {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            display: inline-block;
+            margin: -43px 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .slick-slider1 .slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .move .element {
+            height: 20%;
+            width: 90%;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0px 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .slick-slider .slick-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .slick .slick-dots {
+            /* position: absolute; */
+            /* bottom: -25px; */
+            display: block;
+            width: 100%;
+            padding-bottom: 1277px;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+            background-color: #F2F2F2
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .input-wrapper input {
+            padding-right: 40px;
+        }
+
+        .input-wrapper button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-lg-12 col-md-12 col-sm-12 justify-content-center" style="padding-left: 10px; padding-right:10px">
+        <div class="col-lg-12 container-fluid custom-div">
+            <section>
+                <nav class="container-fluid navbar navbar-expand-lg text-light">
+                    <div class="container-fluid">
+                        <h3 class="font-weight-bold navbar-nav text-dark">Consulting</h3>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-start text-light" id="navbarNav">
+                            <ul class="navbar-nav" id="nav-line">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#feature">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#service">Service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#cases">Cases</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#news">news</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#port">portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#element">elements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#shop">shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item" id="contact-1">
+                                    <a href="#"><img src="images/facebook-logo.png" style="height: 20px;" alt=""></a>
+                                    <a href="#"><img src="images/twitter.png" style="height: 20px;" alt=""></a>
+                                    <a href="#"><img src="images/instagram.png" style="height: 20px;" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </div>
+
+
+
+        <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000" id="carouselimg-1"
+                    style="padding-right: 10px;">
+                    <div class="col-12 slide-1 pt-2">
+                        <div class="col-2 pt-4 d-flex  justify-content-end">
+                            <img src="images/logo.png" style="width: 60px;" alt="">
+                        </div>
+                        <div class="col-2 me-2">
+                            <h1 class="d-inline text-primary">helping</h1>
+                            <h1 class="text-primary">companies</h1>
+                            <h1>negative</h1>
+                            <h1>change</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000" id="carouselimg-2">
+                    <div class="col-12 slide-1 pt-2">
+                        <div class="col-2 pt-4 d-flex  justify-content-end" style="padding-right: 10px;">
+                            <img src="images/logo.png" style="width: 60px;" alt="">
+                        </div>
+                        <div class="col-2 me-2">
+                            <h1 class="d-inline text-primary">Empowering</h1>
+                            <h1 class="text-primary">Visionaries</h1>
+                            <h1 class="text-light">Delivering</h1>
+                            <h1 class="text-light">Result</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000" id="carouselimg-3">
+                    <div class="col-12 slide-1 pt-2">
+                        <div class="col-2 pt-4 d-flex  justify-content-end" style="padding-right: 10px;">
+                            <img src="images/logo.png" style="width: 60px;" alt="">
+                        </div>
+                        <div class="col-2 me-2">
+                            <h1 class="d-inline text-warning">Strategy</h1>
+                            <h1 class="text-warning">Redefined</h1>
+                            <h1 class="text-light">Solutions</h1>
+                            <h1 class="text-light">Amplified</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+
+
+        <div class="col-12 text-center" style="background-color: yellow;" id="box-2">
+            <div class="container-fluid col-lg-10 col-md-12" id="box-3">
+                <div>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                </div>
+                <div>
+                    <button class="btn btn-primary">get a quote</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in-right">
+                    <div class="card card-1" style="background-image: url('images/card-1.png');">
+                        <div class="card-body d-flex align-items-end">
+                        </div>
+                        <div class="card-footer d-flex flex-row ">
+                            <div>
+                                <lord-icon src="https://cdn.lordicon.com/kkudtejl.json" trigger="loop" stroke="light"
+                                    state="loop-cycle" colors="primary:#121331,secondary:#e8b730"
+                                    style="width:60px;height:50px">
+                                </lord-icon>
+                            </div>
+                            <div>
+                                <h6 class="text-light pt-3">Why our consulting</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card card-1" style="background-image: url('images/card-2.png');">
+                        <div class="card-body d-flex align-items-end">
+                        </div>
+                        <div class="card-footer d-flex flex-row ">
+                            <div>
+                                <lord-icon src="https://cdn.lordicon.com/abaxrbtq.json" trigger="loop" stroke="light"
+                                    state="loop-cycle" colors="primary:#e8b730,secondary:#000000"
+                                    style="width:60px;height:50px">
+                                </lord-icon>
+                            </div>
+                            <div>
+                                <h6 class="text-light pt-3">Why our consulting</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in-left">
+                    <div class="card card-1" style="background-image: url('images/card-3.png');">
+                        <div class="card-body d-flex align-items-end">
+
+
+
+                        </div>
+                        <div class="card-footer d-flex flex-row ">
+                            <div>
+                                <lord-icon src="https://cdn.lordicon.com/xahuqqcs.json" trigger="loop" stroke="light"
+                                    state="loop-rotate" colors="primary:#121331,secondary:#e8b730"
+                                    style="width:50px;height:50px">
+                                </lord-icon>
+                            </div>
+                            <div>
+                                <h6 class="text-light pt-3">Why our consulting</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid" style="background-color: #F2F2F2;">
+
+            <div class="d-flex justify-content-center mt-5 pt-5">
+
+                <h1>Industries</h1>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="row" style="height: 100%;">
+
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3">
+                                        <lord-icon src="https://cdn.lordicon.com/amfpjnmb.json" trigger="loop"
+                                            state="loop-cycle" style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-md-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Travel and Aviation consulting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3">
+                                        <lord-icon src="https://cdn.lordicon.com/pbihtexz.json" trigger="loop"
+                                            stroke="light" state="loop-cycle"
+                                            colors="primary:#121331,secondary:#e8b730,tertiary:#c67d53,quaternary:#ebe6ef"
+                                            style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Business servies consulting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3">
+                                        <lord-icon src="https://cdn.lordicon.com/eiekfffz.json" trigger="in"
+                                            delay="1500" state="in-reveal"
+                                            colors="primary:#121331,secondary:#e8b730,tertiary:#646e78"
+                                            style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Consumer Product consulting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="conatiner row">
+                <div class=" col-lg-12 col-md-12">
+                    <div class="row" style="height: 100%;">
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3 ">
+                                        <lord-icon src="https://cdn.lordicon.com/ofcynlwa.json" trigger="loop"
+                                            stroke="light" state="loop-all" style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Finacial Services consuting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3">
+                                        <lord-icon src="https://cdn.lordicon.com/hgqdtxby.json" trigger="hover"
+                                            stroke="light" style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Energy Services consulting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="zoom-in">
+                            <div class="card" id="car">
+                                <div class="row g-0">
+                                    <div class="col-md-4 pt-3">
+                                        <lord-icon src="https://cdn.lordicon.com/yasdvtnp.json" trigger="hover"
+                                            stroke="bold" colors="primary:#e8b730,secondary:#e8b730"
+                                            style="width:90px;height:90px">
+                                        </lord-icon>
+                                    </div>
+                                    <div class="col-8 card-body">
+
+
+                                        <h5 class="card-title mt-2">Surface transport logistics counslting</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Repellendus similique magni ad
+                                            voluptas accusantium! Amet.</p>
+                                        <p id="p1"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="" id="box-4">
+            <div class="container pt-5 pb-5">
+                <div class="col-6">
+                    <h1 style="color: yellow;">Doing the right thing,</h1>
+                    <h1>at the Right time.</h1>
+                </div>
+                <div class="col-8 row pt-5" data-aos="fade-up">
+                    <div class="col-md-3">
+                        <div>
+                            <h1 id="counter"></h1>
+                        </div>
+                        <h6>Case completed</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <h1 id="counter1"></h1>
+                        </div>
+                        <h6>Consulting</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <h1 id="counter2"></h1>
+                        </div>
+                        <h6>Award wining</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <h1 id="counter3"></h1>
+                            <!-- <h1 class="d-inline">%</h1> -->
+                        </div>
+                        <h6>Satisfied</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-12">
+            <div class="d-flex justify-content-center mt-1 pt-2 ">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="d-flex justify-content-center">
+                <hr>
+            </div>
+            
+                <div class="col-lg-12 col-lg slick-slider1">
+                    <div class="col-md-4 element element-1">
+                        <div class="card">
+                            <img src="images/img-3.png" class="img-fluid " style="max-width:100%; height: 100%;" alt="">
+                            <h3>Light Henry</h3>
+                            <h5>Web Developer</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor incidunt
+                                necessitatibus ex
+                                quas molestiae ullam tempore delectus, totam natus!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 element element-2">
+                        <div class="card">
+                            <img src="images/man2.png" style="height: 260px; width:100%" alt="">
+                            <h3>Alex Jacks</h3>
+                            <h5>Python Developer</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor incidunt
+                                necessitatibus ex
+                                quas molestiae ullam tempore delectus, totam natus!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 element element-3">
+                        <div class="card">
+                            <img src="images/slide2.jpg" style="height: 260px; width:100%" alt="">
+                            <h3>Aniy Henry</h3>
+                            <h5>Web Developer</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor incidunt
+                                necessitatibus ex
+                                quas molestiae ullam tempore delectus, totam natus!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 element element-4">
+                        <div class="card">
+                            <img src="images/man-3.png" style="height: 260px; width:100%" alt="">
+                            <h3>Glen Maxi's</h3>
+                            <h5>Ui/Ux Developer</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor incidunt
+                                necessitatibus ex
+                                quas molestiae ullam tempore delectus, totam natus!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 element element-5">
+                        <div class="card">
+                            <img src="images/girl-2.jpg" style="height: 260px; width:100%" alt="">
+                            <h3>Alen Gill</h3>
+                            <h5>Java Developer</h5>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate dolor incidunt
+                                necessitatibus ex
+                                quas molestiae ullam tempore delectus, totam natus!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        
+
+
+
+        <div class="col-lg-12 col-md-12" style="background-color: #F2F2F2;">
+
+            <div class="cantainer slick-slider2 move">
+                <div class="element element-1">
+                    <img src="images/ad1.png" alt="">
+                </div>
+                <div class="element element-2">
+                    <img src="images/ad2.png" alt="">
+                </div>
+                <div class="element element-3">
+                    <img src="images/ad3.png" alt="">
+                </div>
+                <div class="element element-4">
+                    <img src="images/ad4.png" alt="">
+                </div>
+                <div class="element element-5">
+                    <img src="images/ad5.png" alt="">
+                </div>
+                <div class="element element-6">
+                    <img src="images/ad6.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-12" id="box-5">
+            <div class="d-flex flex-column align-items-center text-center align-content-center box-5-1"
+                data-aos="zoom-in">
+                <h2 class="text-light">To help the enterpreneurs get their act together.</h2>
+                <h4 style="color: yellow;">before the talk to investors</h4>
+            </div>
+        </div>
+
+
+        <div class="container mt-1">
+            <div class="d-flex justify-content-center pt-4">
+                <h1>news</h1>
+
+            </div>
+            <div class="d-flex justify-content-center pt-1">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card stock">
+                        <div class="card-body">
+                            <img src="images/stock-2.png" class="rounded" alt="" width="100%">
+                            <hr>
+                            <h6>A digital prescription for the pharma industry</h6>
+                            <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                    state="in-alarm " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">January 26,2023
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card stock">
+
+                        <div class="card-body">
+                            <img src="images/stock-1.png" class="rounded" alt="" width="100%">
+                            <hr>
+                            <h6>A digital prescription for the pharma industry</h6>
+                            <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                    state="in-alarm " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">January 26,2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-down">
+                    <div class="card stock">
+
+                        <div class="card-body">
+                            <img src="images/stock-3.png" class="rounded" alt="" width="100%">
+                            <hr>
+                            <h6>A digital prescription for the pharma industry</h6>
+                            <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                    state="in-alarm " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">January 26,2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-down">
+                    <div class="card stock">
+
+                        <div class="card-body">
+                            <img src="images/stock-5.png" class="rounded" alt="" width="100%">
+                            <hr>
+                            <h6>A digital prescription for the pharma industry</h6>
+                            <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                    state="in-alarm " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">January 26,2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-12 col-md-12 mt-5" style="background-color: #222222;">
+            <div class="container row pt-5 ps-2 pb-5 ">
+                <div class=" col-md-4">
+                    <div class="card " style="background-color: #222222; ">
+                        <div class="card-body text-light ">
+                            <h1>request a call back</h1>
+                            <hr style="background-color: yellow;opacity:1px;">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum non ad eius tempore rem
+                                beatae
+                                tempora ex laborum nisi voluptatum dolores mollitia, est iure earum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 pt-5">
+                    <div>
+                        <h6 class="text-light">I would like to discuss :</h6>
+                    </div>
+                    <div class="row mb-4 ">
+                        <div class="col-md-6 mb-3 mb-md-0 ">
+                            <select class="form-select" style="background-color: #CACACA;">
+                                <option selected>Business Planing</option>
+                                <option value="1 ">Option 1</option>
+                                <option value="2 ">Option 2</option>
+                                <option value="3 ">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 ">
+                            <input type="text " class="form-control" style="background-color: #CACACA;"
+                                placeholder="First Name ">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-6 mb-3 mb-md-0 ">
+                            <input type="text " class="form-control" style="background-color: #CACACA;"
+                                placeholder="Phone Number">
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-success w-25 btn1">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235526.94958391698!2d75.69903267921312!3d22.724204999985943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1716465420573!5m2!1sen!2sin"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+        <div class="container-fluid" style="background-color: #0D2E58;">
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card card-map" style="border-right: 2px solid black;">
+                        <div class="card-body">
+                            <h5 class="card-title">United Kingdoms</h5>
+                            <span><lord-icon src="https://cdn.lordicon.com/cnpvyndp.json" trigger="hover"
+                                    colors="primary:#e8b730" style="width:20px;height:20px;padding-top:4px;">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">Lorem ipsum dolor sit amet.
+                            </p>
+                            <div>
+                                <lord-icon src=" https://cdn.lordicon.com/rsvfayfn.json " trigger="morph "
+                                    state="morph-phone-ring " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon>
+                                <p class="card-text pb-1 d-inline-flex ">1800-000-222
+                                </p>
+                            </div>
+                            <span><lord-icon src="https://cdn.lordicon.com/ayhtotha.json " trigger="in " delay="1500 "
+                                    state="in-chat " colors="primary:#e8b730 "
+                                    style="width:20px;height:18px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">feb@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card card-map" style="border-right: 2px solid black;">
+                        <div class="card-body">
+                            <h5 class="card-title">Germany</h5>
+                            <span><lord-icon src="https://cdn.lordicon.com/cnpvyndp.json" trigger="hover"
+                                    colors="primary:#e8b730" style="width:20px;height:20px;padding-top:4px;">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">Lorem ipsum dolor sit amet.
+                            </p>
+                            <div>
+                                <lord-icon src=" https://cdn.lordicon.com/rsvfayfn.json " trigger="morph "
+                                    state="morph-phone-ring " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon>
+                                <p class="card-text pb-1 d-inline-flex ">1800-000-222
+                                </p>
+                            </div>
+                            <span><lord-icon src="https://cdn.lordicon.com/ayhtotha.json " trigger="in " delay="1500 "
+                                    state="in-chat " colors="primary:#e8b730 "
+                                    style="width:20px;height:18px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">january@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card card-map">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Spain</h5>
+                            <span><lord-icon src="https://cdn.lordicon.com/cnpvyndp.json " trigger="hover"
+                                    colors="primary:#e8b730 " style="width:20px;height:20px;padding-top:4px; ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">Lorem ipsum dolor sit amet.
+                            </p>
+                            <div>
+                                <lord-icon src=" https://cdn.lordicon.com/rsvfayfn.json " trigger="morph "
+                                    state="morph-phone-ring " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon>
+                                <p class="card-text pb-1 d-inline-flex ">1800-000-222
+                                </p>
+                            </div>
+                            <span><lord-icon src="https://cdn.lordicon.com/ayhtotha.json " trigger="in " delay="1500 "
+                                    state="in-chat " colors="primary:#e8b730 "
+                                    style="width:20px;height:18px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">match@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev " type="button " data-bs-target="#cardCarousel " data-bs-slide="prev ">
+        <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+        <span class="visually-hidden ">Previous</span>
+    </button>
+    <button class="carousel-control-next " type="button " data-bs-target="#cardCarousel " data-bs-slide="next ">
+        <span class="carousel-control-next-icon " aria-hidden="true "></span>
+        <span class="visually-hidden ">Next</span>
+    </button>
+    </div>
+    </div>
+
+    <div class="container-fluid pt-5 " style="background-color: #0D2E58; ">
+        <div class="row ">
+            <div class="col-md-3 " data-aos="zoom-in ">
+                <div class="card card-map ">
+                    <div class="card-body ">
+                        <h1 class="card-title ">Consulting</h1>
+                        <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Rerum, aut porro! Et, quas eveniet? Cumque
+                            magni ex odio sed at? </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in ">
+                <div class="card card-map ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Recent News</h5>
+                        <hr style="border-top: 2px solid white; border-radius: 5px; width: 200px; ">
+                        <h6 class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h6>
+                        <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                state="in-alarm " colors="primary:#e8b730 "
+                                style="width:20px;height:20px;padding-top:4px ">
+                            </lord-icon></span>
+                        <p class="card-text pb-1 d-inline-flex ">January 26,2023
+                        </p>
+                        <h6 class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h6>
+                        <div class="d-inline ">
+                            <span><lord-icon src="https://cdn.lordicon.com/gjlgchju.json " trigger="in " delay="1500 "
+                                    state="in-alarm " colors="primary:#e8b730 "
+                                    style="width:20px;height:20px;padding-top:4px ">
+                                </lord-icon></span>
+                            <p class="card-text pb-1 d-inline-flex ">January 26,2023 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in ">
+                <div class="card card-map ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Extra Links</h5>
+                        <hr style="border-top: 2px solid white; border-radius: 5px; width: 200px; ">
+                        <div class="row ">
+                            <div class="col ">
+                                <li>About</li>
+                                <li>Contact</li>
+                                <li>Typegraphy</li>
+                                <li>Career</li>
+                                <li>Shop</li>
+                            </div>
+                            <div class="col ">
+                                <li>News</li>
+                                <li>Testimonials</li>
+                                <li>Services</li>
+                                <li>OurTeam</li>
+                                <li>Our approach</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in ">
+                <div class="card card-map ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Subscribe</h5>
+
+                        <div class="input-wrapper mt-2 mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Email...">
+                            <button>
+                                <lord-icon src="https://cdn.lordicon.com/ayhtotha.json " trigger="in " delay="1500 "
+                                    state="in-chat " colors="primary:#e8b730 " style="width:20px;height:35px; ">
+                                </lord-icon>
+                            </button>
+                        </div>
+                        <p>Get latest update and offer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="border-top: 2px solid white; border-radius: 5px; width: 100%; ">
+        <div class="container d-flex flex-row justify-content-around pb-3 pt-2">
+            <div>
+                <h6 class="text-light">@2023 Consulting Wordpress Theme by Stylemix Themes</h6>
+            </div>
+            <div class="contianer">
+                <a href="" style="padding-right: 2px;"><img src="images/twitter-2.png" style="height: 18px;" alt=""></a>
+                <a href=""><img src="images/facebook-2.png" style="height: 18px;" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.lordicon.com/lordicon.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js "></script>
+</body>
+
+</html>
+<script>
+    let counts = setInterval(updated, 50);
+    let upto = 0;
+
+    function updated() {
+        let count = document.getElementById("counter");
+        count.innerHTML = ++upto;
+        if (upto === 167) {
+            clearInterval(counts)
+            clearInterval(counts1)
+            clearInterval(counts2)
+            clearInterval(counts3)
+        }
+    }
+    let counts1 = setInterval(updated1, 200);
+    let upto1 = 0;
+
+    function updated1() {
+        let count1 = document.getElementById("counter1");
+        count1.innerHTML = ++upto1;
+        if (upto1 === 100) {
+            clearInterval(counts1)
+        }
+    }
+    let counts2 = setInterval(updated2, 403);
+    let upto2 = 0;
+
+    function updated2() {
+        let count2 = document.getElementById("counter2");
+        count2.innerHTML = ++upto2;
+        if (upto2 === 63) {
+            clearInterval(counts2)
+        }
+    }
+    let counts3 = setInterval(updated3, 333);
+    let upto3 = 0;
+
+    function updated3() {
+        let count3 = document.getElementById("counter3");
+        count3.innerHTML = ++upto3;
+        if (upto3 === 50) {
+            clearInterval(counts3)
+        }
+    }
+   
+</script>
+<script>
+    AOS.init();
+</script>
+<script>
+    $(".slick-slider1").slick({
+        speed: 500,
+        slidesToShow: 3,
+        infinite: false,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        dots: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                autoplay: true,
+                dots: true,
+                slidesToScroll: 1,
+                autoplaySpeed: 1000,
+                // centerMode: true,
+
+            }
+
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            }
+        }],
+        arrows: false, Boolean
+    });
+    $(".slick-slider2").slick({
+        speed: 500,
+        slidesToShow: 3,
+        infinite: false,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                autoplay: true,
+                slidesToScroll: 1,
+                autoplaySpeed: 1000,
+                // centerMode: true,
+
+            }
+
+        }, {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                slidesToScroll: 1,
+                infinite: true,
+
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            }
+        }],
+        arrows: false, Boolean
+    });
+</script>
